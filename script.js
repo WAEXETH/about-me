@@ -88,7 +88,7 @@ audio.addEventListener('loadedmetadata', () => {
   const src = audio.currentSrc || audio.src;
   if (src) {
     const filename = src.split('/').pop().replace(/\.[^/.]+$/, '');
-    if (filename && filename !== 'YOUR_MUSIC') {
+    if (filename && filename !== 'images/PAP BEAT BAND -  Official Music Video.mp3') {
       document.getElementById('songTitle').textContent = decodeURIComponent(filename);
     }
   }
