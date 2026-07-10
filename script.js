@@ -10,10 +10,8 @@ document.addEventListener('mousemove', (e) => {
   mouseX = e.clientX;
   mouseY = e.clientY;
 
-
   cursor.style.left = mouseX + 'px';
   cursor.style.top  = mouseY + 'px';
-
 
   blob1.style.left = (mouseX - 250) + 'px';
   blob1.style.top  = (mouseY - 250) + 'px';
@@ -21,7 +19,6 @@ document.addEventListener('mousemove', (e) => {
   blob2.style.left = (mouseX - 200 + 150) + 'px';
   blob2.style.top  = (mouseY - 200 + 100) + 'px';
 });
-
 
 function animateTrail() {
   trailX += (mouseX - trailX) * 0.12;
@@ -31,7 +28,6 @@ function animateTrail() {
   requestAnimationFrame(animateTrail);
 }
 animateTrail();
-
 
 
 const profileWrapper = document.getElementById('profileWrapper');
@@ -59,7 +55,6 @@ document.addEventListener('mouseleave', () => {
 });
 
 
-
 const audio    = document.getElementById('bgMusic');
 const playBtn  = document.getElementById('playBtn');
 const equalizer = document.getElementById('equalizer');
@@ -73,18 +68,14 @@ function toggleMusic() {
     playBtn.textContent = '▶';
     equalizer.classList.remove('playing');
   } else {
-    audio.play().catch(() => {
-    
-    });
+    audio.play().catch(() => {});
     playBtn.textContent = '⏸';
     equalizer.classList.add('playing');
   }
   isPlaying = !isPlaying;
 }
 
-
 audio.addEventListener('loadedmetadata', () => {
-  
   const src = audio.currentSrc || audio.src;
   if (src) {
     const filename = src.split('/').pop().replace(/\.[^/.]+$/, '');
@@ -101,7 +92,6 @@ audio.addEventListener('ended', () => {
 });
 
 
-
 const statNums = document.querySelectorAll('.stat-num');
 
 function animateCount(el, target, duration = 1600) {
@@ -109,7 +99,6 @@ function animateCount(el, target, duration = 1600) {
   const step = (timestamp) => {
     if (!start) start = timestamp;
     const progress = Math.min((timestamp - start) / duration, 1);
-    
     const value = Math.floor(easeOut(progress) * target);
     el.textContent = value;
     if (progress < 1) requestAnimationFrame(step);
@@ -121,7 +110,6 @@ function animateCount(el, target, duration = 1600) {
 function easeOut(t) {
   return 1 - Math.pow(1 - t, 3);
 }
-
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -144,18 +132,4 @@ document.querySelectorAll('.tag').forEach(tag => {
   tag.addEventListener('mouseleave', () => {
     tag.style.transform = '';
   });
-});
-
-
-
-
-const links = {
-  fbLink:    'https://www.facebook.com/waexethuou11',
-  dcLink:    'https://discord.gg/KqT59MXB7B',
-  steamLink: 'https://s.team/p/jtdp-tccn/rnhhqdpd',
-};
-
-Object.entries(links).forEach(([id, url]) => {
-  const el = document.getElementById(id);
-  if (el) el.href = url;
 });

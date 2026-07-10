@@ -1,4 +1,3 @@
-
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -6,18 +5,29 @@
 }
 
 :root {
+  
   --white: #ffffff;
   --black: #111111;
   --gray: #888888;
   --light-gray: #f0f0f0;
   --mid-gray: #dddddd;
-  --accent: #3b82f6;        
-  --accent2: #8b5cf6;     
+  
+  
   --facebook: #1877f2;
   --discord: #5865f2;
   --steam: #1b2838;
+  --github: #333333;
+  --tiktok: #000000;
+  
+  
+  --accent: #3b82f6;
+  --accent2: #8b5cf6;
+  
+  
   --font-main: 'Kanit', sans-serif;
   --font-mono: 'Space Mono', monospace;
+  
+  
   --radius: 20px;
   --shadow: 0 8px 32px rgba(0,0,0,0.08);
 }
@@ -59,7 +69,9 @@ html, body {
 }
 
 body:has(.social-btn:hover) .cursor,
-body:has(button:hover) .cursor { transform: translate(-50%,-50%) scale(2.5); }
+body:has(button:hover) .cursor { 
+  transform: translate(-50%,-50%) scale(2.5); 
+}
 
 
 .bg-blob {
@@ -92,7 +104,7 @@ body:has(button:hover) .cursor { transform: translate(-50%,-50%) scale(2.5); }
   display: grid;
   grid-template-columns: 1fr 320px 1fr;
   gap: 40px;
-  padding: 60px 60px;
+  padding: 60px;
   align-items: center;
   max-width: 1300px;
   margin: 0 auto;
@@ -138,7 +150,7 @@ body:has(button:hover) .cursor { transform: translate(-50%,-50%) scale(2.5); }
   max-width: 380px;
 }
 
-
+/* ===== Social Buttons ===== */
 .socials {
   display: flex;
   flex-direction: column;
@@ -173,9 +185,12 @@ body:has(button:hover) .cursor { transform: translate(-50%,-50%) scale(2.5); }
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
-.facebook  { background: var(--facebook); }
-.discord   { background: var(--discord); }
-.steam     { background: var(--steam); }
+
+.facebook { background: var(--facebook); }
+.discord  { background: var(--discord); }
+.steam    { background: var(--steam); }
+.github   { background: var(--github); }
+.tiktok   { background: var(--tiktok); }
 
 
 .center-panel {
@@ -261,7 +276,7 @@ body:has(button:hover) .cursor { transform: translate(-50%,-50%) scale(2.5); }
   font-family: var(--font-mono);
 }
 
-/* Online status dot */
+
 .status-dot {
   position: absolute;
   bottom: 18px;
@@ -282,7 +297,7 @@ body:has(button:hover) .cursor { transform: translate(-50%,-50%) scale(2.5); }
   100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
 }
 
-
+/* ===== Music Player ===== */
 .music-player {
   background: var(--light-gray);
   border: 1.5px solid var(--mid-gray);
