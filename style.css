@@ -84,7 +84,7 @@ body:has(.map-item:hover) .cursor {
 .blob1 { width: 450px; height: 450px; background: var(--accent); }
 .blob2 { width: 350px; height: 350px; background: var(--accent2); }
 
-/* Main Grid Container (ปรับให้ไม่เบียดฝั่งขวา) */
+
 .container {
   position: relative;
   z-index: 1;
@@ -129,7 +129,7 @@ body:has(.map-item:hover) .cursor {
   font-family: var(--font-mono);
 }
 
-/* Skills Badges */
+
 .skill-badges {
   display: flex;
   flex-wrap: wrap;
@@ -147,7 +147,7 @@ body:has(.map-item:hover) .cursor {
   color: #333;
 }
 
-/* 1. Quick Script Loader */
+
 .script-loader-card {
   background: var(--light-gray);
   border: 1.5px solid var(--mid-gray);
@@ -852,7 +852,7 @@ body:has(.map-item:hover) .cursor {
 .thumbnail.active { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3); }
 .thumbnail img { width: 100%; height: 100%; object-fit: cover; }
 
-/* Responsive adjustments */
+
 @media (max-width: 1080px) {
   .container { grid-template-columns: 1fr; padding: 36px 20px; gap: 28px; }
   .center-panel { order: -1; position: static; }
