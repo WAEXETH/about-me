@@ -1,4 +1,3 @@
-
 const scriptDatabase = {
   sakura: `loadstring(game:HttpGet("https://raw.githubusercontent.com/WAEXETH/RubyHub.luau/refs/heads/main/SakuraStand.lua"))()`,
   rider: `loadstring(game:HttpGet("https://raw.githubusercontent.com/WAEXETH/RubyHub.luau/refs/heads/main/RiderWorld.lua"))()`,
@@ -40,12 +39,10 @@ if (copyScriptBtn) {
         copyScriptBtn.innerHTML = '<span class="btn-icon">📋</span><span class="btn-text">Copy Script</span>';
       }, 2000);
     } catch (err) {
-      console.error('Failed to copy: ', err);
+      console.error(err);
     }
   });
 }
-
-
 
 const GITHUB_USER = 'WAEXETH';
 const GITHUB_REPO = 'RubyHub.luau';
@@ -92,7 +89,7 @@ async function fetchMapUpdates() {
         const url = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/commits?path=${project.file}&page=1&per_page=1`;
         const res = await fetch(url);
         
-        if (!res.ok) throw new Error('Rate limit or not found');
+        if (!res.ok) throw new Error();
         const data = await res.json();
 
         if (data && data.length > 0) {
@@ -144,8 +141,6 @@ async function fetchMapUpdates() {
 
 fetchMapUpdates();
 
-
-
 const cursor = document.getElementById('cursor');
 const cursorTrail = document.getElementById('cursorTrail');
 const blob1 = document.getElementById('blob1');
@@ -192,8 +187,6 @@ function animateTrail() {
 }
 animateTrail();
 
-
-
 const profileWrapper = document.getElementById('profileWrapper');
 
 document.addEventListener('mousemove', (e) => {
@@ -217,8 +210,6 @@ document.addEventListener('mouseleave', () => {
     profileWrapper.style.transform = 'perspective(600px) rotateX(0deg) rotateY(0deg)';
   }
 });
-
-
 
 const audio    = document.getElementById('bgMusic');
 const playBtn  = document.getElementById('playBtn');
@@ -256,8 +247,6 @@ audio.addEventListener('ended', () => {
   isPlaying = false;
 });
 
-
-
 const statNums = document.querySelectorAll('.stat-num');
 
 function animateCount(el, target, duration = 1600) {
@@ -289,8 +278,6 @@ const observer = new IntersectionObserver((entries) => {
 
 statNums.forEach(el => observer.observe(el));
 
-
-
 document.querySelectorAll('.tag').forEach(tag => {
   const deg = (Math.random() - 0.5) * 6;
   tag.addEventListener('mouseenter', () => {
@@ -300,8 +287,6 @@ document.querySelectorAll('.tag').forEach(tag => {
     tag.style.transform = '';
   });
 });
-
-
 
 const scriptBtn = document.getElementById('scriptBtn');
 const modalOverlay = document.getElementById('modalOverlay');
