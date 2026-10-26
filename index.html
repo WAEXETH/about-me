@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta name="description" content="Ruby Hub Developer" />
+  <meta property="og:title" content="Profile | Name wawa " />
+  <meta property="og:description" content="Developer of Ruby Hub High quality scripts for Roblox" />
+  <meta property="og:image" content="images/Sarasa Saionji icons _ Liar Liar icons.jpg" />
+  <meta name="theme-color" content="#121212" />
+
   <title>Profile | Name wawa</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
-<body>
+<body data-theme="dark">
+
+  <button id="themeBtn" class="theme-btn" title="Toggle Theme">☀️</button>
 
   <div class="cursor" id="cursor"></div>
   <div class="cursor-trail" id="cursorTrail"></div>
@@ -25,30 +34,45 @@
       </div>
 
       <div class="skill-badges">
-        <span class="skill-badge">🌙 Lua / Luau</span>
-        <span class="skill-badge">⚡ JavaScript</span>
-        <span class="skill-badge">🎨 HTML / CSS</span>
-        <span class="skill-badge">🐍 Python</span>
+        <span class="skill-badge">Lua </span>
+        <span class="skill-badge">JavaScript</span>
+        <span class="skill-badge">HTML / CSS</span>
+        <span class="skill-badge">Python</span>
       </div>
 
       <div class="script-loader-card">
         <div class="loader-header">
-          <span class="loader-title">📜 Script Loader</span>
+          <div class="loader-title-group">
+            <span class="loader-icon">📜</span>
+            <span class="loader-title">Script Loader</span>
+          </div>
           <span class="hub-tag">Ruby Hub</span>
         </div>
         
-        <select id="scriptSelect" class="script-select">
-          <option value="sakura">Sakura Stand</option>
-          <option value="rider">Rider World</option>
-          <option value="aut">A Universal Time (AUT)</option>
-          <option value="lastrun">Last Run</option>
-          <option value="teto">FeedYourTeto</option>
-          <option value="mtc">Multicrew Tank Combat (MTC)</option>
-          <option value="cts">Cursed Tank Simulator (CTS)</option>
-        </select>
+        <div class="select-wrapper">
+          <select id="scriptSelect" class="script-select">
+            <option value="sakura">Sakura Stand</option>
+            <option value="rider">Rider World</option>
+            <option value="aut">A Universal Time (AUT)</option>
+            <option value="lastrun">Last Run</option>
+            <option value="teto">FeedYourTeto</option>
+            <option value="mtc">Multicrew Tank Combat (MTC)</option>
+            <option value="cts">Cursed Tank Simulator (CTS)</option>
+          </select>
+        </div>
 
-        <div class="code-preview">
-          <code id="scriptCodeText">loadstring(game:HttpGet("..."))()</code>
+        <div class="code-editor">
+          <div class="editor-header">
+            <div class="mac-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="lang-tag">LUA</span>
+          </div>
+          <div class="code-preview">
+            <code id="scriptCodeText">loadstring(game:HttpGet("..."))()</code>
+          </div>
         </div>
 
         <button class="copy-script-btn" id="copyScriptBtn">
@@ -56,10 +80,10 @@
           <span class="btn-text">Copy Script</span>
         </button>
       </div>
-
+      
       <div class="executor-card">
         <div class="executor-header">
-          <span>⚙️ Supported Executors</span>
+          <span>Supported Executors</span>
           <span class="platform-tag">PC Only</span>
         </div>
         <div class="executor-list">
@@ -68,7 +92,7 @@
             <span class="exec-badge">Recommended</span>
           </div>
           <div class="executor-item">
-            <span class="exec-info">🟢 Solara / Wave / Others</span>
+            <span class="exec-info">🟢 madium / Wave / volt</span>
             <span class="exec-status">Supported</span>
           </div>
         </div>
@@ -78,7 +102,7 @@
         <div class="discord-card-content">
           <div class="discord-card-text">
             <h4>Join Ruby Hub</h4>
-            <p>Get updates & support</p>
+            <p>updates & support</p>
           </div>
           <a href="https://discord.gg/KqT59MXB7B" class="discord-join-btn" target="_blank">Join</a>
         </div>
@@ -97,11 +121,12 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.15 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.62.24 2.85.12 3.15.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           GitHub
         </a>
-        <a href="https://www.tiktok.com/@yourusername" class="social-btn tiktok" target="_blank">
+        <a href="https://www.tiktok.com/@zazq_io?is_from_webapp=1&sender_device=pc" class="social-btn tiktok" target="_blank">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.3-.69.3-1.06.02-2.16.01-4.32.02-6.48-.01-2.66.01-5.32.02-7.98h-.01z"/></svg>
           TikTok
         </a>
       </div>
+
     </aside>
 
     <div class="center-panel">
@@ -109,26 +134,25 @@
         <div class="ring ring-outer"></div>
         <div class="ring ring-mid"></div>
         <div class="profile-circle">
-          <img src="images/Kagari Mimi.jpg" alt="Profile" id="profileImg" onerror="this.style.display='none'; document.getElementById('initials').style.display='flex'"/>
+          <img src="images/shiro-seijo-to-kuro-bokushi-白聖女與黑牧師.gif" alt="Profile" id="profileImg" onerror="this.style.display='none'; document.getElementById('initials').style.display='flex'"/>
           <div class="initials" id="initials">UK</div>
         </div>
         <div class="status-dot"></div>
       </div>
 
-      <div class="music-player">
+      <div class="music-player" id="musicPlayerContainer" title="Click to browse music">
         <div class="music-info">
           <span class="music-icon">♪</span>
           <div class="music-text">
-            <span class="song-title" id="songTitle">เกโหดXXX</span>
-            <span class="song-artist" id="songArtist">เกโหดXXX</span>
+            <span class="song-title" id="songTitle">Music</span>
+            <span class="song-artist" id="songArtist">By:zazq_io</span>
           </div>
         </div>
         <div class="music-controls">
           <button class="play-btn" id="playBtn" onclick="toggleMusic()">▶</button>
+          <input type="range" id="volumeSlider" class="volume-slider" min="0" max="1" step="0.01" value="0.5" title="Volume">
         </div>
-        <audio id="bgMusic" loop>
-          <source src="images/โหด.mp3" type="audio/mpeg"/>
-        </audio>
+        <audio id="bgMusic" loop></audio>
         <div class="equalizer" id="equalizer">
           <span></span><span></span><span></span><span></span><span></span>
         </div>
@@ -138,31 +162,34 @@
     <aside class="right-panel">
       <div class="script-status-block">
         <div class="status-header">
-          <h3>⚡ Scripts & Updates</h3>
+          <h3>Scripts & Updates</h3>
           <span class="live-dot" title="Live data from GitHub">Live</span>
         </div>
+        
+        <div class="status-legend">
+          <div class="legend-item"><span>🟢</span> ใช้งานได้ตามปกติ - Working</div>
+          <div class="legend-item"><span>🟡</span> กำลังแก้อัพเดท - Updating</div>
+          <div class="legend-item"><span>🔴</span> เลิกอัพเดต - Discontinued</div>
+        </div>
+
         <div class="map-list" id="mapList">
-          <div class="map-loading">Loading from GitHub...</div>
+          <div class="map-loading">Loading from GitHub</div>
         </div>
       </div>
 
       <div class="stats-block">
         <div class="stat-item">
-          <span class="stat-num" data-target="7">0</span>
+          <span class="stat-num" id="projectStat" data-target="0">0</span>
           <span class="stat-label">Projects</span>
         </div>
         <div class="stat-item">
           <span class="stat-num" data-target="0">0</span>
           <span class="stat-label">Hours Coded</span>
         </div>
-        <div class="stat-item">
-          <span class="stat-num" data-target="74">0</span>
-          <span class="stat-label">Games Played</span>
-        </div>
       </div>
 
       <div class="interests">
-        <h3>ความสนใจ</h3>
+        <h3>Interests</h3>
         <div class="tags">
           <span class="tag">🎮 Gaming</span>
           <span class="tag">💻 Coding</span>
@@ -172,29 +199,52 @@
       </div>
 
       <div class="currently">
-        <h3>ความชื่นชอบ</h3>
+        <h3>Favorites</h3>
         <ul>
-          <li>🎮 ชอบเล่นเกม</li>
-          <li>📺 ชอบดูอนิเมะ</li>
-          <li>🎧 ชอบฟังเพลง</li>
+          <li>Battlefield 1-5-6 Call to Arms Company of Heroes 2 DayZ Dying Light 1-2 Far Cry 6 ฯลฯ</li>
+          <li>liar liar NO 1 กูชอบคนเดียว</li>
+          <li>ไม่อ่านไรทั้งนั้นถ้าอ่าน ก็มังงะ นิยาย ย้ำว่าต้อง รัก โรแมนติก โรงเรียน นะต่างโลกดูได้กูไม่ชอบ</li>
         </ul>
       </div>
     </aside>
 
   </main>
 
-  <button class="script-btn" id="scriptBtn">วิธีใช้สคริป</button>
+  <button class="script-btn" id="scriptBtn" title="Drag me anywhere!">How to Use Scripts</button>
+
+  <!-- กล่องข้อความลับ เข้ารหัสคำว่า "รักทุกคนที่กดมาดูเว็ปนี้" เป็น Base64 -->
+  <div class="secret-box" id="secretBox" title="Decode this message!">
+    4Lij4Lix4LiB4LiX4Li44LiB4LiE4LiZ4LiX4Li14LmI4LiB4LiU4Lih4Liy4LiU4Li54LmA4Lin4LmH4Lib4LiZ4Li14LmI
+  </div>
+
+  <div class="music-modal-overlay" id="musicModalOverlay">
+    <div class="music-modal-content">
+      <button class="close-music-btn" id="closeMusicModal">✕</button>
+      
+      <div id="songSelectView" class="music-view active">
+        <div class="song-view-header" style="justify-content: center; border-bottom: none;">
+          <div class="selected-region-info">
+            <h2 class="music-modal-title">Song</h2>
+          </div>
+        </div>
+        <div class="song-list" id="songListContainer">
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
   <div class="modal-overlay" id="modalOverlay">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2>สอนใช้งาน</h2>
+    <div class="modal-content" id="tutorialModalContent">
+      <div class="modal-header draggable-header" id="modalHeader">
+        <h2>Tutorial</h2>
         <button class="close-btn" id="closeModal">✕</button>
       </div>
       
       <div class="image-container">
         <img src="" alt="Gallery Image" id="modalImage"/>
       </div>
+      <p id="modalCaption" class="modal-caption"></p>
       
       <div class="nav-buttons">
         <button class="nav-btn" id="prevBtn">◀</button>
@@ -207,6 +257,10 @@
       
       <div class="thumbnails" id="thumbnails"></div>
     </div>
+  </div>
+
+  <div id="toast" class="toast">
+    <span class="toast-icon">✅</span> Copied to clipboard!
   </div>
 
   <script src="script.js"></script>
