@@ -240,15 +240,15 @@ document.addEventListener('mouseleave', () => {
 
 const favoriteSongs = [
   { title: "ex-freundin", artist: "By:luu&Nosgov", src: "images/ex-freundin.mp3" },
-  { title: "เพลงที่ชอบ 2", artist: "Unknown", src: "#" },
-  { title: "เพลงที่ชอบ 3", artist: "Unknown", src: "#" },
-  { title: "เพลงที่ชอบ 4", artist: "Unknown", src: "#" },
-  { title: "เพลงที่ชอบ 5", artist: "Unknown", src: "#" },
-  { title: "เพลงที่ชอบ 6", artist: "Unknown", src: "#" },
-  { title: "เพลงที่ชอบ 7", artist: "Unknown", src: "#" },
-  { title: "เพลงที่ชอบ 8", artist: "Unknown", src: "#" },
-  { title: "เพลงที่ชอบ 9", artist: "Unknown", src: "#" },
-  { title: "เพลงที่ชอบ 10", artist: "Unknown", src: "#" }
+  { title: "effed up jeans",artist:"By:Salem Slut", src: "images/effed up jeans.mp3" },
+  { title: "frozone", artist: "BY:STAKILLAZ", src: "images/STAKILLAZ Anor frozone.mp3" },
+  { title: "so bitter ", artist: "By:Stxlkin", src: "images/so bitter slowed reverb.mp3" },
+  { title: "", artist: "Unknown", src: "#" },
+  { title: "", artist: "Unknown", src: "#" },
+  { title: "", artist: "Unknown", src: "#" },
+  { title: "", artist: "Unknown", src: "#" },
+  { title: "", artist: "Unknown", src: "#" },
+  { title: "", artist: "Unknown", src: "#" }
 ];
 
 const audio = document.getElementById('bgMusic');
