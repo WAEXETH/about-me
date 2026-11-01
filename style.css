@@ -238,7 +238,7 @@ body:has(.secret-box:hover) .cursor {
 .left-panel  { animation-delay: 0.1s; } .center-panel{ animation-delay: 0.2s; } .right-panel { animation-delay: 0.3s; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-/* ปรับแต่งปุ่มให้ลากได้อิสระ */
+
 .script-btn { 
   position: fixed; right: 24px; bottom: 24px; 
   background: var(--black); color: var(--white); 
@@ -256,18 +256,15 @@ body:has(.secret-box:hover) .cursor {
 }
 .script-btn:active { cursor: grabbing; }
 
-/* เมื่อกำลังลากปุ่ม ให้ปิดอนิเมชั่น */
+
 .script-btn.dragging-btn {
-  transform: scale(1.06) !important; /* คงขนาดไว้ตอนลาก */
+  transform: scale(1.06) !important; 
   transition: none !important;
   cursor: grabbing !important;
-  pointer-events: none; /* กันไม่ให้เกิดบัคตอนลากทับอย่างอื่น */
+  pointer-events: none; 
 }
 
 
-/* ===========================
-   SECRET MESSAGE BOX 
-   =========================== */
 .secret-box {
   position: fixed;
   left: 24px;
