@@ -233,11 +233,6 @@ document.addEventListener('mouseleave', () => {
   }
 });
 
-
-// ==========================================
-// --- MUSIC PLAYER (FAVORITE 10 SONGS) ---
-// ==========================================
-
 const favoriteSongs = [
   { title: "ex-freundin", artist: "By:luu&Nosgov", src: "images/ex-freundin.mp3" },
   { title: "effed up jeans",artist:"By:Salem Slut", src: "images/effed up jeans.mp3" },
